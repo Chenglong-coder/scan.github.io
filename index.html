@@ -92,11 +92,15 @@
         return now.getFullYear() + '-' + _month + '-' + _day + ' ' + _hour + ':' + _minute + ':' + _second;
     }
 
+    function sa()
+    {
     var ptime = document.getElementById("now_time");
     console.log(nowTime());
     var str = "时间："+ nowTime();
     ptime.innerHTML=str;
-
+    setTimeout("sa()",1000);
+    }
+    window.setTimeout("sa()",1000);
 
     function huoquzhi(){
         var xuehao = getUrlParameter('xuehao');
